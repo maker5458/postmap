@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('bootstrap.css');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('mobile-nav.css');
+
+#jqcheck { background: #fff9d7; text-align: center; color: #333; padding: 10px 0px; font-size: 13px; font-weight: bold; position: fixed; z-index: 9991; width: 100%; font-family: Arial, Helvetica, sans-serif; }
+* { margin: 0px; padding: 0px; }
+
+
+body {color: #000000;font-size:15px; font-family: 'Open Sans', sans-serif;}
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p { margin: 0; padding: 0; width: 100%; }
+
+p { font-weight: 400; line-height: 22px; }
+
+/*** theme sections padding ***/
+.sec-padding-100 { padding:100px 0;} .sec-padding-90 { padding:90px 0;}
+.sec-padding-80 { padding:80px 0;} .sec-padding-70 { padding:70px 0;}
+.sec-padding-60 { padding:60px 0;} .sec-padding-xlarge { padding:50px 0; }
+.sec-padding-large { padding:40px 0; } .sec-padding-medium { padding:30px 0; }
+.sec-padding-small { padding:25px 0; } .sec-padding-xsmall { padding:10px 0; }
+
+/*** theme sections margin ***/
+.sec-margin-100 { margin:100px 0;} .sec-margin-90 { margin:90px 0;}
+.sec-margin-80 { margin:80px 0;} .sec-margin-70 { margin:70px 0;}
+.sec-margin-60 { margin:60px 0;} .sec-margin-xlarge { margin:50px 0; }
+.sec-margin-large { margin:40px 0; } .sec-margin-medium { margin:30px 0; }
+.sec-margin-small { margin:25px 0; } .sec-margin-xsmall { margin:10px 0; }
+
+/*** no padding, no marging ***/
+.p-0 { padding:0; }
+.pt-0 { padding-top:0px; } .pb-0 { padding-bottom:0px; }
+.pl-0 { padding-left:0px; } .pr-0 { padding-right:0px; }
+
+.m-0 { margin:0; }
+.mt-0 { margin-top:0px; } .mb-0 { margin-bottom:0px; }
+.ml-0 { margin-left:0px; } .mr-0 { margin-right:0px; }
+
+a:hover { text-decoration: none; }
+a:focus { outline: none; text-decoration: none; }
+img { border: 0px; outline: none; }
+/*img { max-width: 100%;  }*/
+ul,li { list-style-type: none;padding: 0; margin: 0px; }
+.relative { position:relative; }
+
+
+a { text-decoration: none; }
+
+/* header 
+------------------------------------*/
+.form-box input {
+    padding-right: 43px;
+    border: 1px solid #d6d6d6;
+    margin: 0;
+    box-shadow: none;
+    height: 2.6em;
+    font-size: 17px;
+    line-height: 1.29412;
+    font-weight: 400;
+    letter-spacing: -.021em;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 100%;
+    padding-left: 15px;
+    color: #333;
+    text-align: left;
+    border-radius: 4px;
+    background: #fff;
+    background-clip: padding-box;
+}
+
+.form-box h1 {
+    margin: 5px auto 13px;
+    word-break: break-word;
+    font-size: 32px;
+    line-height: 1.125;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: .004em;
+    color: #494949;
+}
+.name-inpt, .password-inpt{
+	position: relative;
+}
+.password-inpt{
+	display: none;
+}
+.password-inpt-show{
+	display: block;
+}
+.form-box p {
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #494949;
+    margin: 5px auto 13px;
+    word-break: break-word;
+    text-align: center;
+}
+
+input:focus, input:focus:not(:focus-visible), input:focus  {
+    border-color: #0070c9;
+    outline-offset: 1px;
+    border-width: 1px;
+    box-shadow: 0 0 0 1px rgb(131 192 253 / 50%);
+    border: 0;
+    position: relative;
+    z-index: 5;
+}
+
+.ct-container input:focus, .ct-container input:focus:not(:focus-visible), .ct-container input:focus{
+	/* border-width: 1px; */
+}
+.password-inpt input{
+	display: none;
+}
+.show-password {
+	display: block;
+}
+.app-container {
+    overflow: hidden;
+}
+.show-password  input{
+    height: 2.6em;
+    -webkit-transition: height .2s linear;
+    -o-transition: height .2s linear;
+    transition: height .2s linear;
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    display: block;
+}
+#show-pass, #show-pass2 {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    opacity: 0.5;
+    z-index: 9;
+}
+#show-fld{
+	display: none;
+}
+.show-btn{
+	opacity: 1 !important;
+	cursor: pointer;
+}
+
+.hide-btn{
+	display: none !important;
+}
+#name-spinner, #name-spinner2 {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    display: none;
+    z-index: 9;
+}
+
+.show-btn2{
+	opacity: 1 !important;
+	cursor: pointer;
+}
+
+#name-spinner img, #name-spinner2 img, #show-pass img, #show-pass2 img {
+    width: 28px;
+}
+
+/* The container */
+.ct-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  font-size: 17px;
+  line-height: 1.29412;
+  font-weight: 400;
+  margin: 0 0 0 5px;
+  letter-spacing: -.021em;
+  font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+  display: block;
+  position: relative;
+  vertical-align: top;
+  margin-top: 50px;
+  padding-left: 26px;
+  margin-bottom: 0;
+  color: #333;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Hide the browser's default checkbox */
+.ct-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  outline: 2px solid rgb(131 192 253 / 0%);
+}
+
+/* Create a custom checQkbox */
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  transform: translate(-410%);
+  outline: 2px solid rgb(131 192 253 / 0%);
+}
+
+/* On mouse-over, add a grey background color */
+.ct-container:hover input ~ .checkmark {
+  background-color: transparent;
+}
+
+/* When the checkbox is checked, add a blue background */
+.ct-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+  outline: 2px solid #c1e0fe;
+  outline: 2px solid rgba(131,192,253,.5);
+  outline-offset: 1px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.ct-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.ct-container .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.link a{
+	    cursor: pointer;
+	    text-decoration: none;
+	    color: #3587d0;
+	    text-align: center;
+	    display: inline;
+	    font-size: 14px;
+	    margin: 10px 0 0;
+}
+.hr-line {
+    background-image: url(../images/hr-line.png);
+    background-size: cover;
+    width: 100%;
+    max-width: 328px;
+    margin: auto;
+    height: 1px;
+    margin: 10px 0 0;
+}
+.link a:hover {
+    border-bottom: 1px solid;
+}
+
+.link {
+    text-align: center;
+    margin: 15px 0 0;
+}
+.ct-logo {
+    text-align: center;
+    margin: 0 0 40px;
+}
+
+#srch-icon img {height: 25px;opacity: 0.8;position: relative;top: -2px;}
+#basket-icon img {height: 25px;opacity: 0.8;}
+.top-menu {
+    background: #333;
+    padding: 8px 0;
+}
+
+.top-menu ul li {
+    display: inline-block;
+    padding: 5px 30px 0 0;
+    font-size: 14px;
+}
+
+.top-menu ul li a {
+    color: #f5f5f7;
+    font-size: 13px;
+    transition: all .6s ease;
+    opacity: 0.8;
+}
+.top-menu ul li a:hover {
+    color: #fff;
+    opacity: 1;
+}
+.ct-logo-top {
+    text-align: center;
+    opacity: 0.8;
+    transition: all .6s ease;
+}
+.ct-logo-top:hover, #srch-icon img:hover, #basket-icon img:hover {
+    opacity: 1;
+}
+section.top-btm-box h1 {
+    font-size: 25px;
+    margin: 0 0 0 21px;
+    color: #000;
+}
+
+section.top-btm-box {
+    padding: 10px 0;
+    margin: 0 0 30px;
+}
+
+section.top-btm-box ul li {
+    display: inline-block;
+    padding: 5px 20px 0 0;
+}
+
+section.top-btm-box ul {
+    text-align: right;
+    margin: 0 95px 0 0px;
+}
+
+section.top-btm-box ul li a {
+    font-size: 13px;
+    color: #000;
+}
+
+section.top-btm-box ul li a:hover {
+    color: #06c;
+}
+section.top-btm-box .container:after {
+    width: 90%;
+    height: 1px;
+    background: #ccc;
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-54%);
+}
+
+section.top-btm-box .container {
+    position: relative;
+}
+footer {
+    background: #f5f5f7;
+    padding: 15px 0;
+    margin: 100px 0 0;
+}
+
+.para p a {
+    color: #06c;
+}
+
+.para p {
+    font-size: 13px;
+}
+
+.row.para-foot {
+    margin: 0 0 0 -30px;
+    font-size: 13px;
+}
+
+ul.foote-link li a {
+    color: #000000;
+    font-size: 12px;
+}
+
+ul.foote-link li {
+    display: inline-block;
+    padding: 0 15px 0 0px;
+}
+
+ul.foote-link {
+    margin: 0 0 0 -15px;
+}
+
+ul.country-list li a {
+    color: #000000;
+    font-size: 13px;
+}
+.mobile-nav{
+	display: none;
+}
+a#mob-arrow{
+	display: none;
+}
+.ct-error {
+    background: #fed48aad;
+    padding: 20px 10px;
+    margin: 5px 0 0;
+    border-radius: 5px;
+    display: none;
+}
+
+.ct-error p {
+    padding: 0 !important;
+    margin: 0;
+    color: #000;
+}
+.ct-error-show{
+  display: block;
+}
+/********** Responsive **********/
+
+
+@media only screen and (max-width: 799px){
+.top-menu{
+	display: none;
+}
+section.top-btm-box h1 {
+    margin: 0;
+}
+section.top-btm-box ul {
+    display: none;
+}
+section.top-btm-box i {
+    text-align: right;
+    display: block;
+    font-size: 25px;
+}
+
+a#mob-arrow {
+    color: #000;
+}
+
+section.top-btm-box .container:after {
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    transform: translateX(0%);
+}
+footer {
+    padding: 15px;
+}
+ul.foote-link {
+    margin: 10px 0;
+}
+.row.para-foot {
+    margin: 10px 0 0 -30px;
+    font-size: 13px;
+}
+ul.country-list {
+    margin: 0 0 0 -15px;
+}
+.mobile-nav{
+	display: block;
+}
+a#mob-arrow{
+	display: block;
+}
+}
